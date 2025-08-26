@@ -25,7 +25,7 @@ namespace YourNamespace.Controllers
         /// <param name="fileName">Nome do arquivo a ser criado.</param>
         /// <param name="file">Arquivo enviado pelo cliente.</param>
         /// <returns>Mensagem de sucesso.</returns>
-        [HttpPost("Add/{fileName}/{bucketName}")]
+        [HttpPost("add/{fileName}/{bucketName}")]
         public async Task<IActionResult> UploadFile(string bucketName, string fileName, IFormFile file)
         {
             try
@@ -56,7 +56,7 @@ namespace YourNamespace.Controllers
         /// <param name="bucketName">Nome do bucket.</param>
         /// <param name="fileName">Nome do arquivo a ser baixado.</param>
         /// <returns>Arquivo solicitado.</returns>
-        [HttpGet("Get-File/{fileName}/{bucketName}")]
+        [HttpGet("get-file/{fileName}/{bucketName}")]
         public async Task<IActionResult> GetFile(string bucketName, string fileName)
         {
             try
@@ -83,7 +83,7 @@ namespace YourNamespace.Controllers
         /// <param name="bucketName">Nome do bucket.</param>
         /// <param name="fileName">Nome do arquivo a ser deletado.</param>
         /// <returns>Mensagem de sucesso.</returns>
-        [HttpDelete("Delete/{fileName}/{bucketName}")]
+        [HttpDelete("delete/{fileName}/{bucketName}")]
         public async Task<IActionResult> DeleteFile(string bucketName, string fileName)
         {
             try
